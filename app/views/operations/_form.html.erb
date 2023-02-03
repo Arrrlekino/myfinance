@@ -31,16 +31,20 @@
   </div>
 
 
+    
+    
   <div class="col-md-4">
-    
-    
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Choose Category</label>
+    <select class="form-control" name="operation[category_id]">
     <% @categories.each do |category| %>
-      <%= form.label :category, style: "display: block" %>
-      <%= form.select :category, Category.name %>
-    
+      <option value="<%= category.id %>"><%= category.name %></option>
     <% end %>
-    
+    </select>
   </div>
+  </div>
+    
+  
 
 
   <div>
