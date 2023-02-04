@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'report/index'
+  get 'report/report_by_category'
+  get 'report/report_by_dates'
   get 'main/index'
   root 'main#index'
   resources :operations
