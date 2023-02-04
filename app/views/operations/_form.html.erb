@@ -51,9 +51,7 @@
   <div class="row g-3 align-items-left">
     <div class="col-2 text">
       <label for="operation_category_id" class="form-label">Category</label>
-    </div>
 
-    <div class="col-2 text">
       <select
           name="operation[category_id]"
           id="operation_category_id"
@@ -67,8 +65,11 @@
       </select>
     </div>
   </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+ <p>
+  <div class="col-2">
+<div>
+<%= form.submit "Submit", class:"btn btn-success" %>
+</div>
+</div>
+</p>
 <% end %>

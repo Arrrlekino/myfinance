@@ -1,9 +1,12 @@
-<h1>New category</h1>
+<div class="container-fluid">
+  <h1>New category</h1>
 
-<%= render "form", category: @category %>
+  <%= render "form", category: @category %>
 
-<br>
-
-<div>
-  <%= link_to "Back to categories", categories_path %>
+  <br>
+  <p>
+  <div>
+    <%= link_to "Back to categories", categories_path, class:"btn btn-primary" %>
+  </div>
+  </p>
 </div>

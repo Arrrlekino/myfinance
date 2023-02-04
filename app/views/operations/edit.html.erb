@@ -1,10 +1,13 @@
-<h1>Editing operation</h1>
+<div class="container-fluid">
+  <h1>Editing operation</h1>
 
-<%= render "form", operation: @operation %>
+  <%= render "form", operation: @operation %>
 
-<br>
-
-<div>
-  <%= link_to "Show this operation", @operation %> |
-  <%= link_to "Back to operations", operations_path %>
+  <br>
+  <p>
+  <div>
+    <%= link_to "Show this operation", @operation, class:"btn btn-warning" %>
+    <%= link_to "Back to operations", operations_path, class:"btn btn-primary" %>
+  </div>
+  </p>
 </div>

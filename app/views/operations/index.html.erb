@@ -1,14 +1,17 @@
-<p style="color: green"><%= notice %></p>
+<div class="container-fluid">
+  <p style="color: green"><%= notice %></p>
 
-<h1>Operations</h1>
+  <h1>Operations</h1>
 
-<div id="operations">
-  <% @operations.each do |operation| %>
+  <div id="operations">
+    <% @operations.each do |operation| %>
     <%= render operation %>
-    <p>
-      <%= link_to "Show this operation", operation %>
-    </p>
-  <% end %>
+      <p>
+        <%= link_to "Show this operation", operation, class:"btn btn-primary" %>
+      </p>
+    <% end %>
+  </div>
+  <p>
+    <%= link_to "New operation", new_operation_path, class:"btn btn-success" %>
+  </p>
 </div>
-
-<%= link_to "New operation", new_operation_path %>
