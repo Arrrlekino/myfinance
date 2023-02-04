@@ -3,7 +3,8 @@ class OperationsController < ApplicationController
 
   # GET /operations or /operations.json
   def index
-    @operations = Operation.all
+    @operations = Operation.page(params[:page])
+    #@operations = Operation.all
     console
   end
 
