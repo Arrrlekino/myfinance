@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
   
   #get 'report/index'
-  get 'report/index', to: 'report/index'
+  get 'reports/index', to: 'reports/index'
   #get 'report/report_by_category'
-  get 'report/report_by_category', to: 'report/index'
+  get 'reports/report_by_category', to: 'reports/index'
   #get 'report/report_by_dates'
-  get 'report/report_by_dates', to: 'report/report_by_dates'
+  get 'reports/report_by_dates', to: 'reports/report_by_dates'
   get 'main/index'
   root 'main#index'
- # resources :report
+  #resources :reports
   resources :operations
   resources :categories
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
