@@ -1,5 +1,6 @@
 class ReportsController < ApplicationController
   def index
+    render :index
   end
 
   def report_by_category

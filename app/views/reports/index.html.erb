@@ -40,6 +40,16 @@
     </div>
   </div>
 
+  <!-- Input Type -->
+  div class="row g-3 align-items-left">
+    <div class="col-2 text">
+  <div>
+  <%= form.label :otype, style: "display: block" %>
+  <%= form.select :otype, Operation.otypes.keys %>
+  </div> 
+  </div>
+  </div>  
+  
   <p>
   <div>
     <%= link_to_ "Report by dates", report_by_dates_path, class:"btn btn-success" %>
