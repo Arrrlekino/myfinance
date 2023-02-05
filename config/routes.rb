@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'report/report_by_dates', to: 'report/report_by_dates'
   get 'main/index'
   root 'main#index'
-  resources :report
+ # resources :report
   resources :operations
   resources :categories
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
