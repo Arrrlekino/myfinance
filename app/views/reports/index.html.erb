@@ -1,2 +1,51 @@
+<div class="container-fluid">
 <h1>Reports#index</h1>
 <p>Find me in app/views/reports/index.html.erb</p>
+
+<!-- Input start_date -->
+<div class="row g-3 align-items-center">
+    <div class="col-2 text">
+  <div>
+    <%= form.label :odate, style: "display: block" %>
+    <%= form.datetime_field :odate %>
+  </div>
+  </div>
+  </div>  
+  <!-- Input end_date -->
+  <div class="row g-3 align-items-center">
+    <div class="col-2 text">
+  <div>
+    <%= form.label :odate, style: "display: block" %>
+    <%= form.datetime_field :odate %>
+  </div>
+  </div>
+  </div>
+
+  <!-- Input Category -->
+ div class="row g-3 align-items-left">
+    <div class="col-2 text">
+      <label for="operation_category_id" class="form-label">Category</label>
+
+      <select
+          name="operation[category_id]"
+          id="operation_category_id"
+          class="form-select"
+      >
+          <%= Category.all.each do |c| %>
+          <option value=<%= c.id %>>
+            <%= c.name %>
+          </option>
+          <% end %>
+      </select>
+    </div>
+  </div>
+
+  <p>
+  <div>
+    <%= link_to_ "Report by dates", report_by_dates_path, class:"btn btn-success" %>
+    <%= link_to "Report by category", report_by_category_path, class:"btn btn-primary" %>
+  </div>
+  </p>
+
+
+</div>  
