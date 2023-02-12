@@ -1,2 +1,38 @@
-<h1>Reports#report_by_category</h1>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<h1>Report#report_by_category</h1>
 <p>Find me in app/views/reports/report_by_category.html.erb</p>
+
+<canvas id="myChart" width="600" height="400"></canvas>
+<script>
+  const ctx = document.getElementById('myChart').getContext('2d');
+  const data = {
+  labels: <%= raw @odates %>,
+  datasets: [{
+    label: 'Exchange Rate',
+    data: <%= @amounts %>,
+    fill: false,
+    borderColor: 'rgb(75, 192, 192)',
+    tension: 0.1
+  }]
+};
+
+const config = {
+  type: 'line',
+  data: data,
+  options: {
+    responsive: false
+  }
+};
+
+const myChart = new Chart(ctx, config);
+</script>
+
+<script type='text/javascript'>
+  (function(){
+    if(!sessionStorage.getItem('firstLoad')){
+      sessionStorage['firstLoad'] = true;
+      window.location.reload();
+    }else{
+      sessionStorage.removeItem('firstLoad');
+  }})();
+</script> 

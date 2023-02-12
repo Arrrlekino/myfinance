@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get 'main/index'
   root 'main#index'
-  #resources :reports
+  resources :reports
   resources :operations
   resources :categories
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
